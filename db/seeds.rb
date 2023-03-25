@@ -11,7 +11,7 @@ puts "seeding 🌰🌰🌰🌰🌰"
   )
 
   HeroPower.create(
-    strength: Faker::Superhero.power,
+    strength: Faker::Base.sample(['Strong', 'Weak', 'Average']),
     hero: hero,
     power: power
   )
