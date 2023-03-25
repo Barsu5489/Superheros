@@ -1,7 +1,7 @@
 class HerosController < ApplicationController
-  def Powers
+  def index 
+ heros = Hero.all
+ render json: heros
   end
 
-  def HeroPower
-  end
 end
