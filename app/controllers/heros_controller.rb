@@ -4,4 +4,13 @@ class HerosController < ApplicationController
  render json: heros
   end
 
+  def show  
+    hero = Hero.find_by(id: params[:id])
+    if hero
+      render json: hero , include: [:powers]
+    else 
+      render json: {error: "Hero not found"}
+    end
+  end
+
 end
